@@ -29,7 +29,9 @@ class Migration(migrations.Migration):
                 ("password", models.CharField(max_length=128, verbose_name="password")),
                 (
                     "last_login",
-                    models.DateTimeField(blank=True, null=True, verbose_name="last login"),
+                    models.DateTimeField(
+                        blank=True, null=True, verbose_name="last login"
+                    ),
                 ),
                 (
                     "is_superuser",
@@ -41,11 +43,15 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "first_name",
-                    models.CharField(blank=True, max_length=150, verbose_name="first name"),
+                    models.CharField(
+                        blank=True, max_length=150, verbose_name="first name"
+                    ),
                 ),
                 (
                     "last_name",
-                    models.CharField(blank=True, max_length=150, verbose_name="last name"),
+                    models.CharField(
+                        blank=True, max_length=150, verbose_name="last name"
+                    ),
                 ),
                 (
                     "is_staff",
@@ -60,13 +66,15 @@ class Migration(migrations.Migration):
                     models.BooleanField(
                         default=True,
                         help_text="Designates whether this user should be treated as active. "
-                                  "Unselect this instead of deleting accounts.",
+                        "Unselect this instead of deleting accounts.",
                         verbose_name="active",
                     ),
                 ),
                 (
                     "date_joined",
-                    models.DateTimeField(default=django.utils.timezone.now, verbose_name="date joined"),
+                    models.DateTimeField(
+                        default=django.utils.timezone.now, verbose_name="date joined"
+                    ),
                 ),
                 ("email", models.EmailField(max_length=254, unique=True)),
                 ("telegram_id", models.CharField(max_length=100)),
@@ -75,7 +83,7 @@ class Migration(migrations.Migration):
                     models.ManyToManyField(
                         blank=True,
                         help_text="The groups this user belongs to. "
-                                  "A user will get all permissions granted to each of their groups.",
+                        "A user will get all permissions granted to each of their groups.",
                         related_name="user_set",
                         related_query_name="user",
                         to="auth.group",

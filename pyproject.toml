@@ -21,6 +21,7 @@ drf-spectacular = "^0.28.0"
 python-dotenv = "^1.0.1"
 drf-yasg = "^1.21.8"
 django-cors-headers = "^4.7.0"
+coverage = "^7.6.12"
 
 
 [build-system]
